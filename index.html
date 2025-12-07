@@ -1,1 +1,224 @@
-Hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e1e4e8;
+        }
+        
+        .logo {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #24292e;
+        }
+        
+        h1 {
+            color: #24292e;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        
+        .username {
+            color: #0366d6;
+            font-weight: bold;
+            background: #f1f8ff;
+            padding: 2px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        p {
+            color: #586069;
+            line-height: 1.6;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        
+        .features {
+            background: #f6f8fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+            border-left: 4px solid #0366d6;
+        }
+        
+        .features h3 {
+            color: #24292e;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 8px 0;
+            color: #586069;
+            display: flex;
+            align-items: center;
+        }
+        
+        li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2ea44f;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #22863a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 164, 79, 0.2);
+        }
+        
+        .btn-secondary {
+            background: #0366d6;
+        }
+        
+        .btn-secondary:hover {
+            background: #005cc5;
+        }
+        
+        .counter {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fafbfc;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 0.9em;
+            color: #586069;
+        }
+        
+        footer {
+            margin-top: 30px;
+            color: #6a737d;
+            font-size: 0.9em;
+            border-top: 1px solid #e1e4e8;
+            padding-top: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚀</div>
+        
+        <h1>Welcome to My GitHub Page!</h1>
+        <p>Your site is now live at:</p>
+        <div class="username">https://username.github.io</div>
+        
+        <p>This is a simple starter template for your GitHub Pages website.</p>
+        
+        <div class="features">
+            <h3>What you can do:</h3>
+            <ul>
+                <li>Edit this HTML file directly on GitHub</li>
+                <li>Add your own content and styles</li>
+                <li>Create multiple pages</li>
+                <li>Use JavaScript for interactivity</li>
+                <li>Store notes, blogs, or projects</li>
+            </ul>
+        </div>
+        
+        <div>
+            <a href="https://github.com" class="btn" target="_blank">Visit GitHub</a>
+            <a href="#" class="btn btn-secondary" onclick="showMessage()">Click Me!</a>
+        </div>
+        
+        <div class="counter">
+            <span id="visit-count">0</span> button clicks
+        </div>
+        
+        <footer>
+            <p>Created with ❤️ using GitHub Pages</p>
+            <p>Last updated: <span id="current-date"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple click counter
+        let clickCount = 0;
+        const visitCountElement = document.getElementById('visit-count');
+        
+        // Load saved count from localStorage
+        if (localStorage.getItem('clickCount')) {
+            clickCount = parseInt(localStorage.getItem('clickCount'));
+            visitCountElement.textContent = clickCount;
+        }
+        
+        function showMessage() {
+            clickCount++;
+            visitCountElement.textContent = clickCount;
+            localStorage.setItem('clickCount', clickCount);
+            
+            alert('Hello! You clicked the button ' + clickCount + ' time(s).');
+        }
+        
+        // Set current date
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = 
+            currentDate.toLocaleDateString('en-US', options);
+            
+        // Change username in the URL to actual username
+        const urlElement = document.querySelector('.username');
+        const currentUrl = window.location.hostname;
+        if (currentUrl.includes('github.io')) {
+            const username = currentUrl.split('.')[0];
+            urlElement.textContent = `https://${username}.github.io`;
+        }
+    </script>
+</body>
+</html>

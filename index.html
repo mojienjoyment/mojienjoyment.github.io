@@ -1,1 +1,125 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .post {
+            margin-bottom: 3rem;
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            color: #0066cc;
+        }
+
+        .post-date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-content {
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .post-content p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p class="subtitle">Writer · Developer · Thinker</p>
+    </header>
+
+    <main>
+        <article class="post">
+            <h2 class="post-title"><a href="#">Welcome to My Blog</a></h2>
+            <p class="post-date">December 15, 2024</p>
+            <div class="post-content">
+                <p>This is my first blog post. Welcome to my personal space on the internet where I'll be sharing thoughts, ideas, and projects.</p>
+                <p>I created this simple website to have full control over my content and share it in a clean, distraction-free environment. No ads, no tracking, just pure content.</p>
+                <p>Stay tuned for more posts coming soon!</p>
+            </div>
+        </article>
+
+        <article class="post">
+            <h2 class="post-title"><a href="#">My Second Post</a></h2>
+            <p class="post-date">December 10, 2024</p>
+            <div class="post-content">
+                <p>Here's another example post. You can add as many posts as you want by copying this article structure.</p>
+                <p>The beauty of a static site is its simplicity and speed. Everything loads instantly and works everywhere.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

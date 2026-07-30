@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Modern Web Development - Your Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">Your Name</a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#posts">Posts</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="../index.html" class="back-home">← Back to Home</a>
+            
+            <article class="post-content">
+                <header class="post-header">
+                    <h1>Getting Started with Modern Web Development</h1>
+                    <p class="post-meta">December 15, 2024</p>
+                </header>
+
+                <p>The web development landscape has evolved dramatically over the past few years. In this comprehensive guide, we'll explore the essential tools and frameworks that every modern developer should know about.</p>
+
+                <h2>1. Choose Your Framework</h2>
+                <p>Modern web development offers several excellent choices for building user interfaces:</p>
+                <ul>
+                    <li><strong>React</strong> - A flexible library for building user interfaces</li>
+                    <li><strong>Vue.js</strong> - Progressive framework for building UIs</li>
+                    <li><strong>Angular</strong> - Full-featured framework by Google</li>
+                    <li><strong>Svelte</strong> - Compiler-based approach for smaller bundles</li>
+                </ul>
+
+                <h2>2. Set Up Your Development Environment</h2>
+                <p>Before diving into code, you'll need to set up a proper development environment:</p>
+                <pre><code># Install Node.js and npm
+# Then create a new project
+npm create vite@latest my-app
+cd my-app
+npm install
+npm run dev</code></pre>
+
+                <h2>3. Learn the Fundamentals</h2>
+                <p>While frameworks come and go, understanding the fundamentals is crucial:</p>
+                <ul>
+                    <li>HTML5 semantic elements</li>
+                    <li>CSS Grid and Flexbox</li>
+                    <li>JavaScript ES6+ features</li>
+                    <li>Responsive design principles</li>
+                </ul>
+
+                <blockquote>
+                    "The best way to learn web development is by building real projects. Start small, iterate often, and don't be afraid to make mistakes."
+                </blockquote>
+
+                <h2>4. Version Control with Git</h2>
+                <p>Git is essential for modern development workflows. Learn the basics:</p>
+                <pre><code>git init
+git add .
+git commit -m "Initial commit"
+git push origin main</code></pre>
+
+                <h2>Conclusion</h2>
+                <p>Starting your web development journey can seem overwhelming, but by taking it step by step and focusing on the fundamentals, you'll build a strong foundation. Remember to practice regularly, build projects that interest you, and stay curious about new technologies.</p>
+
+                <p>Happy coding!</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#posts">Posts</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="mailto:your@email.com">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <p style="margin-top: 1.5rem;">&copy; 2024 Your Name. Keep Simple, Make Fun.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

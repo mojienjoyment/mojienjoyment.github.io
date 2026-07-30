@@ -3,123 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .post {
-            margin-bottom: 3rem;
-        }
-
-        .post-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .post-title a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        .post-title a:hover {
-            color: #0066cc;
-        }
-
-        .post-date {
-            color: #999;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .post-content {
-            color: #444;
-            line-height: 1.8;
-        }
-
-        .post-content p {
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
+    <title>Your Name - Keep Simple, Make Fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p class="subtitle">Writer · Developer · Thinker</p>
+        <nav>
+            <a href="index.html" class="logo">Your Name</a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <article class="post">
-            <h2 class="post-title"><a href="#">Welcome to My Blog</a></h2>
-            <p class="post-date">December 15, 2024</p>
-            <div class="post-content">
-                <p>This is my first blog post. Welcome to my personal space on the internet where I'll be sharing thoughts, ideas, and projects.</p>
-                <p>I created this simple website to have full control over my content and share it in a clean, distraction-free environment. No ads, no tracking, just pure content.</p>
-                <p>Stay tuned for more posts coming soon!</p>
-            </div>
-        </article>
-
-        <article class="post">
-            <h2 class="post-title"><a href="#">My Second Post</a></h2>
-            <p class="post-date">December 10, 2024</p>
-            <div class="post-content">
-                <p>Here's another example post. You can add as many posts as you want by copying this article structure.</p>
-                <p>The beauty of a static site is its simplicity and speed. Everything loads instantly and works everywhere.</p>
-            </div>
-        </article>
+        <div class="container">
+            <ul class="post-list" id="posts">
+                <li class="post-item">
+                    <h2 class="post-title"><a href="posts/getting-started-modern-web.html">Getting Started with Modern Web Development</a></h2>
+                    <p class="post-meta">December 15, 2024</p>
+                    <p class="post-excerpt">
+                        The web development landscape has evolved dramatically over the past few years. 
+                        In this post, we'll explore the essential tools and frameworks that every modern 
+                        developer should know about. From JavaScript frameworks to build tools, 
+                        we'll cover everything you need to get started...
+                    </p>
+                    <a href="posts/getting-started-modern-web.html" class="read-more">Read More →</a>
+                </li>
+                
+                <li class="post-item">
+                    <h2 class="post-title"><a href="posts/building-scalable-apps.html">Building Scalable Applications</a></h2>
+                    <p class="post-meta">December 10, 2024</p>
+                    <p class="post-excerpt">
+                        Scalability is one of the most important considerations when building applications 
+                        that need to handle growth. Let's dive into the principles and patterns that will 
+                        help you build systems that scale. We'll discuss database design, caching strategies, 
+                        load balancing, and microservices architecture...
+                    </p>
+                    <a href="posts/building-scalable-apps.html" class="read-more">Read More →</a>
+                </li>
+                
+                <li class="post-item">
+                    <h2 class="post-title"><a href="posts/clean-code-practices.html">Clean Code Practices for Better Software</a></h2>
+                    <p class="post-meta">December 5, 2024</p>
+                    <p class="post-excerpt">
+                        Writing clean, maintainable code is a skill that every developer should master. 
+                        In this article, we'll explore best practices for writing code that is easy to 
+                        read, understand, and modify. Learn about naming conventions, function design, 
+                        code organization, and more...
+                    </p>
+                    <a href="posts/clean-code-practices.html" class="read-more">Read More →</a>
+                </li>
+            </ul>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <footer id="contact">
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="mailto:your@email.com">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <p style="margin-top: 1.5rem;">&copy; 2024 Your Name. Keep Simple, Make Fun.</p>
+        </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

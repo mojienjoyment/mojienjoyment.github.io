@@ -3,103 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Keep Simple, Make Fun</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>My Modern Blog</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Your Name</a>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">YourName<span>.log</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="posts/post-1.html" class="nav-small">Posts</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
             </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#posts">Posts</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
-    <main>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <ul class="post-list" id="posts">
-                <li class="post-item">
-                    <h2 class="post-title"><a href="posts/getting-started-modern-web.html">Getting Started with Modern Web Development</a></h2>
-                    <p class="post-meta">December 15, 2024</p>
-                    <p class="post-excerpt">
-                        The web development landscape has evolved dramatically over the past few years. 
-                        In this post, we'll explore the essential tools and frameworks that every modern 
-                        developer should know about. From JavaScript frameworks to build tools, 
-                        we'll cover everything you need to get started...
-                    </p>
-                    <a href="posts/getting-started-modern-web.html" class="read-more">Read More →</a>
-                </li>
-                
-                <li class="post-item">
-                    <h2 class="post-title"><a href="posts/building-scalable-apps.html">Building Scalable Applications</a></h2>
-                    <p class="post-meta">December 10, 2024</p>
-                    <p class="post-excerpt">
-                        Scalability is one of the most important considerations when building applications 
-                        that need to handle growth. Let's dive into the principles and patterns that will 
-                        help you build systems that scale. We'll discuss database design, caching strategies, 
-                        load balancing, and microservices architecture...
-                    </p>
-                    <a href="posts/building-scalable-apps.html" class="read-more">Read More →</a>
-                </li>
-                
-                <li class="post-item">
-                    <h2 class="post-title"><a href="posts/clean-code-practices.html">Clean Code Practices for Better Software</a></h2>
-                    <p class="post-meta">December 5, 2024</p>
-                    <p class="post-excerpt">
-                        Writing clean, maintainable code is a skill that every developer should master. 
-                        In this article, we'll explore best practices for writing code that is easy to 
-                        read, understand, and modify. Learn about naming conventions, function design, 
-                        code organization, and more...
-                    </p>
-                    <a href="posts/clean-code-practices.html" class="read-more">Read More →</a>
-                </li>
-            </ul>
+            <h1>Thoughts, stories, and ideas.</h1>
+            <p>A minimal space for maximum impact.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+        <div class="posts-grid">
+            
+            <!-- Post Card 1 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1499750310159-5b600aaf0378?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Setup">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="date"><i class="far fa-clock"></i> Oct 24, 2023</span>
+                        <span class="read-time"><i class="far fa-hourglass"></i> 4 min read</span>
+                        <span class="updated"><i class="fas fa-history"></i> Updated: Oct 25</span>
+                    </div>
+                    <h2><a href="posts/post-1.html">The Future of Minimalist Web Design</a></h2>
+                    <p>Exploring how less truly becomes more when we strip away the unnecessary and focus on content...</p>
+                    <a href="posts/post-1.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Post Card 2 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coding">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="date"><i class="far fa-clock"></i> Nov 02, 2023</span>
+                        <span class="read-time"><i class="far fa-hourglass"></i> 6 min read</span>
+                        <span class="updated"><i class="fas fa-history"></i> Updated: Nov 03</span>
+                    </div>
+                    <h2><a href="posts/post-2.html">Mastering Async JavaScript</a></h2>
+                    <p>A deep dive into Promises, Async/Await, and how to handle asynchronous operations cleanly...</p>
+                    <a href="posts/post-2.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Post Card 3 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Writing">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="date"><i class="far fa-clock"></i> Nov 15, 2023</span>
+                        <span class="read-time"><i class="far fa-hourglass"></i> 3 min read</span>
+                        <span class="updated"><i class="fas fa-history"></i> Updated: Nov 15</span>
+                    </div>
+                    <h2><a href="#">Why I Switched to Static Sites</a></h2>
+                    <p>Performance, security, and simplicity. Here is why I left dynamic CMS platforms behind...</p>
+                    <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
         </div>
     </main>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <ul class="footer-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#posts">Posts</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="mailto:your@email.com">Contact</a></li>
-            </ul>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>YourName.log</h3>
+                    <p>Building digital experiences with clarity and purpose.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-            <p style="margin-top: 1.5rem;">&copy; 2024 Your Name. Keep Simple, Make Fun.</p>
+            <div class="copyright">
+                &copy; 2023 Your Name. All rights reserved.
+            </div>
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
